@@ -1,5 +1,9 @@
 import 'dotenv/config'
 import app from './app.js'
+import connectDatabase from './config/db.js';
+
+// database
+connectDatabase()
 
 app.get("/health", (req, res) => {
   res.send("Site is completely healthy !");

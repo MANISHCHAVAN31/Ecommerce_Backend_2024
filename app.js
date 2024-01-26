@@ -12,7 +12,7 @@ app.use(cookieParser());
 app.use(cors());
 
 // routes
-// import * as routes from "./routes.js";
-// app.use("/api/v1", routes);
+import routes from "./routes.js";
+app.use("/api/v1", routes);
 
 export default app;
