@@ -1,6 +1,6 @@
 import User from "../models/user.model.js";
-import { ApiError } from "../utils/ApiError.js";
-import { asyncHandler } from "../utils/asyncHandler.js";
+import ApiError from "../utils/ApiError.js";
+import asyncHandler from "../utils/asyncHandler.js";
 import cookieToken from "../utils/cookieToken.js";
 
 export const signup = asyncHandler(async (req, res) => {
@@ -56,7 +56,7 @@ export const logout = asyncHandler(async (req, res) => {
   //   httpOnly: true,
   // });
 
-  res.clearCookie('token')
+  res.clearCookie("token");
 
   res.status(200).json({
     success: true,
