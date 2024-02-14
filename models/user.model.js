@@ -26,6 +26,17 @@ const userSchema = new mongoose.Schema(
       minlength: [6, "Password should be atleast 6 chars"],
       select: false,
     },
+    phone_initial: {
+      type: String,
+      default: "91", // india code
+    },
+    phone_number: {
+      type: String,
+    },
+    role: {
+      type: String,
+      default: "user",
+    },
     photo: {
       id: {
         type: String,
@@ -36,6 +47,26 @@ const userSchema = new mongoose.Schema(
     },
     forgottenToken: String,
     forgotPasswordExpiry: Date,
+
+    // userdetails
+    address_line_1: {
+      type: String,
+    },
+    address_line_2: {
+      type: String,
+    },
+    city: {
+      type: String,
+    },
+    state: {
+      type: String,
+    },
+    pincode: {
+      type: String,
+    },
+    country: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
